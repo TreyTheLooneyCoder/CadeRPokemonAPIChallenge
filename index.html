@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/output.css">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.0.0/dist/flowbite.min.css" rel="stylesheet" />
+
+    <title>Pkmn API Challenge</title>
+</head>
+<body class="bg-[url(/assets/PokemonApiBackground.jpeg)]">
+
+    <div class="absolute xl:top-10 xl:left-24 md:top-32 md:left-7 max-sm:top-32 max-sm:left-7">
+        <div class="bg-black opacity-65 rounded-md w-[355px] h-[267px] xs:w-[175px] max-sm:h-[165px]"></div>
+
+        <div class="">
+            <img id="PokeImg" class="absolute top-[-4rem] left-[-3rem] max-w-96 h-80" src="" alt="">
+            <p id="PokeId" class="text-white absolute text-xl top-3 left-60">#:</p>
+            <p id="PokeName" class="text-white absolute text-xl top-44 left-9">Name:</p>
+            <p id="PokeType" class="text-white absolute text-xl top-52 left-9">Element:</p>
+
+            <img id="RandomBtn" class="absolute bg-white rounded-md w-[45px] h-[45px] top-22 left-56" src="./assets/reload.png" alt="Random pokemon button.">
+            <img id="ShinyMode" class="absolute w-[45px] h-[40px] top-36 left-56" src="./assets/brightness.png" alt="Change Icon for the img.">
+        </div>
+
+
+    </div>
+
+    <div class=" absolute top-10 xl:left-[30rem] md:left-7 max-sm:left-2">
+            <div class="xl:max-w-[838px] max-sm:max-w-[7rem]">
+                <input type="search" id="searchBar" class="xl:w-[838px] xl:h-[44px] md:w-[680px] md:h-[70px] max-sm:w-[9rem] max-sm:h-[48px] min-md:ps-4 text-max-sm block border rounded-lg text-white placeholder-white bg-black focus:ring-black focus:border-black dark:bg-gray-700 dark:border-gray-600 dark:placeholder-white dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 opacity-70" placeholder="Search..." required />
+                
+                <img id="FavBtn" class="absolute xl:w-[45px] xl:h-[40px] md:w-[70px] md:h-[70px] max-sm:w-[35px] max-sm:h-[35px] top-0 xl:right-[-60px] md:right-[-80px] max-sm:right-[0px] max-sm:left-[9.5rem]" src="./assets/star.png" alt="star icon">
+            </div>
+    </div>
+
+    <div class="absolute overflow-auto h-fit xl:max-w-[904px] xl:top-[6.25rem] xl:left-[30rem] md:top-[20.75rem] md:left-[26rem] max-sm:top-[20.75rem] max-sm:left-[26rem]">
+        <div class="bg-black opacity-65 rounded-md xl:w-[904px] h-[68px] md:w-[359px] max-sm:w-[177px]"></div>
+
+        <p class="text-white absolute top-1 left-2">Abilities:</p>
+        <p id="AbilitiesText" class="text-white absolute top-1 left-20"></p>
+    </div>
+
+    <div class="absolute overflow-auto h-[123px] xl:max-w-[904px] xl:top-[11.5rem] xl:left-[30rem] md:max-w-[745px] md:top-[26.5rem] md:left-7 max-sm:max-w-[364px] max-sm:top-[26.5rem] max-sm:left-7">
+        <div class="bg-black opacity-65 rounded-md xl:w-[903px] h-[400px] md:w-[745px] max-sm:w-[364px]"></div>
+        
+        <p class="text-white absolute top-1 left-2">Moves:</p>
+        <p id="MovesText" class="text-white absolute top-1 left-20"></p>
+    </div>
+
+    <div class="absolute overflow-auto h-fit xl:max-w-[904px] xl:top-[20.5rem] xl:left-[30rem] md:max-w-[745px] md:top-[36rem] md:left-7 max-sm:max-w-[364px] max-sm:top-[36rem] max-sm:left-7">
+        <div class="bg-black opacity-65 rounded-md xl:w-[904px] h-[190px] md:w-[745px] max-sm:w-[364px]"></div>
+
+        <p class="text-white absolute top-1 left-2">Evolution:</p>
+        <p id="EvoText" class="text-white absolute top-1 left-20"></p>
+    </div>
+
+    <div class="absolute overflow-auto h-fit max-w-[359px] xl:top-[20.5rem] xl:left-24 md:top-32 md:left-[26rem] max-sm:top-32 max-sm:left-[26rem]">
+        <div class="bg-black opacity-65 rounded-md w-[359px] xl:h-[190px] md:h-[180px] max-sm:w-[177] max-sm:h-[100px]"></div>
+
+        <p class="text-white absolute top-1 left-2">Locations:</p>
+        <p id="LocationText" class="text-white absolute top-1 left-22"></p>
+    </div>
+
+    <div class="absolute overflow-auto xl:mb-2 xl:h-fit xl:max-w-[1290px] xl:top-[33.75rem] xl:left-24 md:max-w-[745px] md:top-[50rem] md:left-7 max-sm:max-w-[364px] max-sm:top-[50rem] max-sm:left-7">
+        <div class="bg-black opacity-65 rounded-md xl:w-[1290px] xl:h-[190px] md:w-[737px] md:h-[492px] max-sm:w-[364px] max-sm:h-[323px]"></div>
+
+        <p class="text-white absolute top-1 left-2">Favorites:</p>
+        <ul id="FavsText" class="text-white absolute top-1 left-20"></ul>
+    </div>
+
+    <script type="module" src="./scripts/app.js"></script>
+    <script type="module" src="./scripts/randombtn.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.0.0/dist/flowbite.min.js"></script>
+</body>
+</html>
